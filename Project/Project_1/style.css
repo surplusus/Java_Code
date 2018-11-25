@@ -1,0 +1,163 @@
+html,body{
+  width: 99%;
+  height:100%;
+  background-color: rgb(160, 217, 137);
+}
+body{
+  text-align:center;
+}
+footer{
+  width: auto;
+  margin: 10px 0px;
+  background-color: #ffffff;
+}
+/* body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+} */
+
+/* 외부링크로 가져온 버튼 style 시작 */
+button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:0.8em;
+  padding:0.2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  width: 90px;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+/* 외부링크로 가져온 버튼 style 끝 */
+
+nav{
+  background-color: #ffffff;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row; /*  가로로 배치하기 */
+  justify-content: flex-end;
+}
+.wrapper_button{
+  margin: 5px;
+}
+
+/* 역순으로 정렬된 순서 바꾸기 */
+/* .wrapper_button:nth-child(1){
+  order: 4;
+}
+.wrapper_button:nth-child(2){
+  order: 3;
+}
+.wrapper_button:nth-child(3){
+  order: 2;
+}
+.wrapper_button:nth-child(4){
+  order: 1;
+} */
+
+.container_grid{
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 50px 50px;
+  grid-gap: 3px;
+}
+.container_flex{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  /* margin 태그순서 - 위,오른쪽,아래,왼쪽 */
+  margin: 20px 0px;
+}
+.wrapper_link{
+  display: flex;
+  padding: 20px 0px;
+  justify-content: center; /* flex item들을 가로기준 가운데정렬 */
+  align-items: center; /*  flex item 들을 세로기준 가운데정렬 */
+}
+.wrapper_link a{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+  padding: 15px 0px;
+}
+/* #link_side{ link테그 양 옆에 빈 공간의 div를 만들어서 여백을 나눠갖는 grow 써줬음
+  background-color: #ffffff;
+  width:auto;
+  flex-grow: 1;
+} justify를 알고 난 뒤로는 쓸필요가 없어졌어요*/
+.link_aboutme, .link_photo{
+  background-color: #a0d989;
+  margin: 0px 10px;
+  width: 120px;
+  height: 50px;
+}
+article img{ /* 복잡하게하지말고 그냥 block속성주고 margin left right를 auto로 주면 가운데 정렬되네 */
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+}
+#object_square{
+  box-shadow: 5px 5px 5px silver;
+}
+.article_aboutme{
+  background-color: #ffffff;
+  width: auto;
+  margin: 20px 0px; /* margin 태그순서 - 위,오른쪽,아래,왼쪽 */
+  padding: 20px 40px;
+  text-align: left;
+}
+.wrapper_photo{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+.photo{
+  border: solid silver 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: left;
+  margin: 40px;
+  width: 250px;
+  height: 250px;
+}
